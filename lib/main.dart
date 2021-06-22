@@ -145,133 +145,128 @@ class MyApp extends StatelessWidget {
                   SizedBox(
                     height: 10.0,
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        print('Movies Clicked');
-                      },
-                      child: Card(
-                        child: Container(
-                          height: catHeightSize,
-                          width: catWidthSize,
-                          //padding: EdgeInsets.all(25.0),
-                          color: catBoxColor,
-                          child: Text(
-                            'Movies',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: catFontSize,
-                            ),
+                  TextButton(
+                    onPressed: () {
+                      print('Movies Clicked');
+                    },
+                    child: Card(
+                      elevation: 2.0,
+                      child: Container(
+                        height: catHeightSize,
+                        width: catWidthSize,
+                        //padding: EdgeInsets.all(25.0),
+                        color: catBoxColor,
+                        child: Text(
+                          'Movies',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: catFontSize,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        print('Sports Clicked');
-                      },
-                      child: Card(
-                        child: Container(
-                          height: catHeightSize,
-                          width: catWidthSize,
-                          //padding: EdgeInsets.all(25.0),
-                          color: catBoxColor,
-                          child: Text(
-                            'Sports',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: catFontSize,
-                            ),
+                  TextButton(
+                    onPressed: () {
+                      print('Sports Clicked');
+                    },
+                    child: Card(
+                      child: Container(
+                        height: catHeightSize,
+                        width: catWidthSize,
+                        //padding: EdgeInsets.all(25.0),
+                        color: catBoxColor,
+                        child: Text(
+                          'Sports',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: catFontSize,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        print('History Clicked');
-                      },
-                      child: Card(
-                        child: Container(
-                          height: catHeightSize,
-                          width: catWidthSize,
-                          //padding: EdgeInsets.all(25.0),
-                          color: catBoxColor,
-                          child: Text(
-                            'History',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: catFontSize,
-                            ),
+                  TextButton(
+                    onPressed: () {
+                      print('History Clicked');
+                    },
+                    child: Card(
+                      child: Container(
+                        height: catHeightSize,
+                        width: catWidthSize,
+                        //padding: EdgeInsets.all(25.0),
+                        color: catBoxColor,
+                        child: Text(
+                          'History',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: catFontSize,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        print('Politics Clicked');
-                      },
-                      child: Card(
-                        child: Container(
-                          height: catHeightSize,
-                          width: catWidthSize,
-                          //padding: EdgeInsets.all(25.0),
-                          color: catBoxColor,
-                          child: Text(
-                            'Politics',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: catFontSize,
-                            ),
+                  TextButton(
+                    onPressed: () {
+                      print('Politics Clicked');
+                    },
+                    child: Card(
+                      child: Container(
+                        height: catHeightSize,
+                        width: catWidthSize,
+                        //padding: EdgeInsets.all(25.0),
+                        color: catBoxColor,
+                        child: Text(
+                          'Politics',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: catFontSize,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        print('Video Games Clicked');
-                      },
-                      child: Card(
-                        child: Container(
-                          height: catHeightSize,
-                          width: catWidthSize,
-                          //padding: EdgeInsets.all(25.0),
-                          color: catBoxColor,
-                          child: Text(
-                            'Video Games',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: catFontSize,
-                            ),
+                  TextButton(
+                    onPressed: () {
+                      print('Video Games Clicked');
+                    },
+                    child: Card(
+                      child: Container(
+                        height: catHeightSize,
+                        width: catWidthSize,
+                        //padding: EdgeInsets.all(25.0),
+                        color: catBoxColor,
+                        child: Text(
+                          'Video Games',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: catFontSize,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () {
-                        print('Technology Clicked');
-                      },
-                      child: Card(
-                        child: Container(
-                          height: catHeightSize,
-                          width: catWidthSize,
-                          //padding: EdgeInsets.all(25.0),
-                          color: catBoxColor,
-                          child: Text(
-                            'Technology',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: catFontSize,
-                            ),
+                  TextButton(
+                    onPressed: () {
+                      print('Technology Clicked');
+                    },
+                    child: Card(
+                      child: Container(
+                        height: catHeightSize,
+                        width: catWidthSize,
+                        //padding: EdgeInsets.all(25.0),
+                        color: catBoxColor,
+                        child: Text(
+                          'Technology',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: catFontSize,
                           ),
                         ),
                       ),
