@@ -7,15 +7,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  var catFontSize = 18.0;
+  var catFontSize = 25.0;
   var catWidthSize = double.infinity;
-  var catHeightSize = 30.0;
-  var catBoxColor = Colors.tealAccent;
+  var catHeightSize = 40.0;
+  var catBoxColor = Colors.white;
   var drawerColor = Colors.teal.shade300;
-  var drawerFontSize = 15.0;
+  var drawerFontSize = 18.0;
 
-  TextButton drawerCategory(
-      {var drawerCategoryName, IconData iconName = Icons.favorite}) {
+  TextButton drawerCategory({var drawerCategoryName, IconData iconName = Icons.favorite}) {
     return TextButton(
       onPressed: () {
         print('$drawerCategoryName Clicked');
@@ -37,24 +36,29 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  TextButton appCategory({var appCategoryName}) {
-    return TextButton(
-      onPressed: () {
-        print('$appCategoryName Clicked');
-      },
-      child: Card(
-        elevation: 2.0,
-        child: Container(
-          height: catHeightSize,
-          width: catWidthSize,
-          //padding: EdgeInsets.all(25.0),
-          color: catBoxColor,
-          child: Text(
-            '$appCategoryName',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: catFontSize,
+  Expanded appCategory({var appCategoryName}) {
+    return Expanded(
+      child: Padding(
+        padding: EdgeInsets.all(2.0),
+        child: TextButton(
+          onPressed: () {
+            print('$appCategoryName Clicked');
+          },
+          child: Card(
+            elevation: 2.0,
+            child: Container(
+              //padding: EdgeInsets.all(25.0),
+              height: catHeightSize,
+              width: catWidthSize,
+              color: catBoxColor,
+              child: Text(
+                '$appCategoryName',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: catFontSize,
+                ),
+              ),
             ),
           ),
         ),
@@ -84,12 +88,9 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            drawerCategory(
-                drawerCategoryName: 'Profile', iconName: Icons.person),
-            drawerCategory(
-                drawerCategoryName: 'Statistics', iconName: Icons.insert_chart),
-            drawerCategory(
-                drawerCategoryName: 'Settings', iconName: Icons.settings),
+            drawerCategory(drawerCategoryName: 'Profile', iconName: Icons.person),
+            drawerCategory(drawerCategoryName: 'Statistics', iconName: Icons.insert_chart),
+            drawerCategory(drawerCategoryName: 'Settings', iconName: Icons.settings),
           ]),
         ),
         appBar: AppBar(
@@ -117,39 +118,37 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Container(
             color: Colors.teal.shade500,
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+            child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
+              Row(
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.pan_tool,
-                        color: Colors.yellow,
-                        //size: 10.0,
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      Text(
-                        'Hey ,Welcome Back.....Let\'s play',
-                        style: TextStyle(
-                          fontSize: catFontSize,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
+                  Icon(
+                    Icons.pan_tool,
+                    color: Colors.yellow,
+                    //size: 10.0,
                   ),
                   SizedBox(
-                    height: 10.0,
+                    width: 5.0,
                   ),
-                  appCategory(appCategoryName: 'Movies'),
-                  appCategory(appCategoryName: 'Sports'),
-                  appCategory(appCategoryName: 'History'),
-                  appCategory(appCategoryName: 'Politics'),
-                  appCategory(appCategoryName: 'Video Games'),
-                  appCategory(appCategoryName: 'Technology'),
-                ]),
+                  Text(
+                    'Hey ,Welcome Back.....\nLet\'s play',
+                    style: TextStyle(
+                      fontSize: catFontSize,
+                      //fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              appCategory(appCategoryName: 'Movies'),
+              appCategory(appCategoryName: 'Sports'),
+              appCategory(appCategoryName: 'History'),
+              appCategory(appCategoryName: 'Politics'),
+              appCategory(appCategoryName: 'Video Games'),
+              appCategory(appCategoryName: 'Technology'),
+            ]),
           ),
         ),
       ),
